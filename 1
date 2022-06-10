@@ -1,0 +1,1 @@
+cat log.txt | grep ^10.1.192.38 |sed -e 's/sid=\// /; s/\/&/ /' |awk '{print $8}' | sort -k2
