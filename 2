@@ -1,0 +1,10 @@
+[Unit]
+	Description=app.jar service
+[Service]
+	Type=simple
+	ExecStart= usr/bin/java -jar app.jar some_out_file "Service is working!"
+	StartLimitIntervalSec=60
+	StartLimitBurst=3
+	KillMode=mixed	
+[Install]
+	WantedBy=multi-user.target
